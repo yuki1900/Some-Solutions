@@ -1,0 +1,4 @@
+To solve "ModuleNotFoundError: No module named 'pip'":
+step 1: open cmd and type "python -m ensurepip"
+step 2: continue to type "python -m pip install --upgrade pip"
+OK
