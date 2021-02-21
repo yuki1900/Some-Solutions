@@ -1,0 +1,2 @@
+When type "mysql -u xxx -p xxx" in cmd, this ERROR could happen.
+Change the command into "mysql -u xxx -pxxx" to solve it.
