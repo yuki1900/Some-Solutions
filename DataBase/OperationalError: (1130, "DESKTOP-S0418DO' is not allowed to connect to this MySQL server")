@@ -1,0 +1,13 @@
+原因：不容许本地机器连远程mysql服务。
+
+使用下列步骤解决即可：
+
+在cmd使用mysql -u root -p命令进入mysql数据库
+输入mysql> select host,user from user ;
+可以看到host和对应的user，表示了user在对应的host(IP地址)下可以访问数据库。
+
+由于Mysql中不可以远程访问本机数据库，所以需要修改权限。
+在Navicat中使用下列命令进行权限修改：
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'xxx.xxx.xxx.xxx' IDENTIFIED BY 'xxxxxx' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+此时添加了root用户可以在IP地址为xxx.xxx.xxx.xxx下以密码xxxxxx来访问数据库。
